@@ -1,4 +1,5 @@
 import 'package:book_commerce_app/ui/home.dart';
+import 'package:book_commerce_app/ui/landing.dart';
 import 'package:book_commerce_app/ui/login.dart';
 import 'package:book_commerce_app/ui/register.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,17 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Color.fromARGB(255, 211, 159, 1),
+        ),
+        badgeTheme: const BadgeThemeData(
+          backgroundColor: Color.fromARGB(255, 245, 224, 162),
+          textColor: Colors.black,
+        ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          backgroundColor: Color.fromARGB(255, 211, 159, 1),
+          selectedItemColor: Color.fromARGB(255, 245, 224, 162),
+        ),
         useMaterial3: true,
       ),
       darkTheme: ThemeData(
@@ -62,14 +74,26 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.blueGrey,
+        ),
+        badgeTheme: const BadgeThemeData(
+          backgroundColor: Colors.blueGrey,
+          textColor: Colors.white,
+        ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          backgroundColor: Colors.blueGrey,
+          selectedItemColor: Colors.blueGrey[200],
+        ),
         useMaterial3: true,
       ),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       initialRoute: "/",
       routes: {
         "/": (context) => const Home(),
         "/login": (context) => const Login(),
         "/register": (context) => const Register(),
+        "/landing": (context) => Landing(),
       },
     );
   }

@@ -87,7 +87,7 @@ class _LoginState extends State<Login> {
               );
             }),
             ElevatedButton(
-              onPressed: () => {},
+              onPressed: () => Navigator.pushNamed(context, '/landing'),
               child: Text("Iniciar Sesión", style: GoogleFonts.roboto()),
             ),
             TextButton(
